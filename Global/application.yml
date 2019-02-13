@@ -1,0 +1,28 @@
+eureka:
+  client:
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    hostname: localhost
+ spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    initialization-mode: always
+    password: spade
+    url: jdbc:postgresql://192.168.11.12/sims
+    username: spade
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL92Dialect
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: true
+  profiles:
+    active: dev
