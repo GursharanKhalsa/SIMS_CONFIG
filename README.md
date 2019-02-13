@@ -1,5 +1,5 @@
 # SIMS_CONFIG
 SIMS microservice config
 
-#Global
+# Global
 contain global application.properties configruation
